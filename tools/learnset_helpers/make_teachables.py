@@ -46,7 +46,7 @@ def enabled() -> bool:
     """
     Check if the user has explicitly enabled this opt-in helper.
     """
-    with open("./include/config/pokemon.h", "r") as cfg_pokemon_fp:
+    with open("./include/config/pokemon.h", "r", encoding='utf-8') as cfg_pokemon_fp:
         cfg_pokemon = cfg_pokemon_fp.read()
         cfg_defined = CONFIG_ENABLED_PAT.search(cfg_pokemon)
         return cfg_defined is not None and cfg_defined.group("cfg_val") in ("TRUE", "1")
@@ -58,7 +58,7 @@ def extract_repo_tutors() -> typing.Generator[str, None, None]:
     foolproof, but it's suitable.
     """
     for inc_fname in chain(glob.glob("./data/scripts/*.inc"), glob.glob("./data/maps/*/scripts.inc")):
-        with open(inc_fname, "r") as inc_fp:
+        with open(inc_fname, "r", encoding='utf-8') as inc_fp:
             incfile = inc_fp.read()
             if not INCFILE_HAS_TUTOR_PAT.search(incfile):
                 continue
@@ -71,7 +71,7 @@ def extract_repo_tms() -> typing.Generator[str, None, None]:
     """
     Yield MOVE constants assigned to a TM or HM in the user's repo.
     """
-    with open("./include/constants/tms_hms.h", "r") as tmshms_fp:
+    with open("./include/constants/tms_hms.h", "r", encoding='utf-8') as tmshms_fp:
         tmshms = tmshms_fp.read()
         match_it = TMHM_MACRO_PAT.finditer(tmshms)
         if not match_it:
@@ -86,7 +86,7 @@ def extract_repo_universals() -> list[str]:
     Return a list of MOVE constants which are deemed to be universal and can
     thus be learned by any species.
     """
-    with open("./src/pokemon.c", "r") as pokemon_fp:
+    with open("./src/pokemon.c", "r", encoding='utf-8') as pokemon_fp:
         if match := UNIVERSAL_MOVES_PAT.search(pokemon_fp.read()):
             return list(filter(lambda s: s, map(lambda s: s.strip(), match.group(1).split(','))))
         return list()
@@ -96,7 +96,7 @@ def prepare_output(all_learnables: dict[str, set[str]], repo_teachables: set[str
     """
     Build the file content for teachable_learnsets.h.
     """
-    with open("./src/data/pokemon/teachable_learnsets.h", "r") as teachables_fp:
+    with open("./src/data/pokemon/teachable_learnsets.h", "r", encoding='utf-8') as teachables_fp:
         old = teachables_fp.read()
 
     cursor = 0
@@ -140,7 +140,7 @@ def create_tutor_moves_array(tutors: list[str]) -> None:
     Generate gTutorMoves[] if P_TUTOR_MOVES_ARRAY is enabled.
     """
     # Check if the config is enabled
-    with open("./include/config/pokemon.h", "r") as cfg_pokemon_fp:
+    with open("./include/config/pokemon.h", "r", encoding='utf-8') as cfg_pokemon_fp:
         cfg_pokemon = cfg_pokemon_fp.read()
         cfg_defined = TUTOR_ARRAY_ENABLED_PAT.search(cfg_pokemon)
         if not (cfg_defined and cfg_defined.group("cfg_val") in ("TRUE", "1")):
@@ -157,7 +157,7 @@ def create_tutor_moves_array(tutors: list[str]) -> None:
     lines = [f"    {move}," for move in sorted(tutors)]
     lines.append("    MOVE_UNAVAILABLE\n};\n")
 
-    with open("./src/data/tutor_moves.h", "w") as f:
+    with open("./src/data/tutor_moves.h", "w", encoding='utf-8') as f:
         f.write(header + "\n".join(lines))
 
 
@@ -221,11 +221,11 @@ def main():
     h_align = max(map(lambda move: len(move), chain(repo_universals, repo_teachables))) + 2
     header = prepare_header(h_align, repo_tms, repo_tutors, repo_universals)
 
-    with open(SOURCE_LEARNSETS_JSON, "r") as source_fp:
+    with open(SOURCE_LEARNSETS_JSON, "r", encoding='utf-8') as source_fp:
         all_learnables = json.load(source_fp)
 
     content = prepare_output(all_learnables, repo_teachables, header)
-    with open("./src/data/pokemon/teachable_learnsets.h", "w") as teachables_fp:
+    with open("./src/data/pokemon/teachable_learnsets.h", "w", encoding='utf-8') as teachables_fp:
         teachables_fp.write(content)
 
 

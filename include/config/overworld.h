@@ -1,6 +1,8 @@
 #ifndef GUARD_CONFIG_OVERWORLD_H
 #define GUARD_CONFIG_OVERWORLD_H
 
+// done i think?
+
 // Movement config
 #define OW_RUNNING_INDOORS          GEN_LATEST  // In Gen4+, players are allowed to run indoors.
 #define SLOW_MOVEMENT_ON_STAIRS     FALSE       // If enabled, the player will move slower up/down stairs like in FR
