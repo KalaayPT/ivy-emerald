@@ -358,8 +358,9 @@
 #define METATILE_MeteorFalls_CaveEntrance_Top     0x246
 
 // gTileset_Mossdeep
-#define METATILE_Mossdeep_Door              0x2A1
-#define METATILE_Mossdeep_Door_SpaceCenter  0x2ED
+#define METATILE_Mossdeep_Door                   0x2A1
+#define METATILE_Mossdeep_Door_SpaceCenter       0x2ED
+#define METATILE_Mossdeep_TallGrass_Waterlogged  0x288
 
 // gTileset_MossdeepGameCorner
 #define METATILE_MossdeepGameCorner_CounterClosed_Bottom  0x232

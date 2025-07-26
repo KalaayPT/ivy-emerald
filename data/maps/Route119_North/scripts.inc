@@ -1,0 +1,2 @@
+Route119_North_MapScripts::
+	.byte 0

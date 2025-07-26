@@ -43,10 +43,10 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_UNUSED_0x020    0x20 // no encounter flag, used in overworld scripts to disable wild encounters
+#define FLAG_UNUSED_0x021    0x21 // no fight flag, used in overworld scripts to disable trainer battles
+#define FLAG_UNUSED_0x022    0x22 // no collision flag, used in overworld scripts to disable tile collision
+#define FLAG_UNUSED_0x023    0x23 // pokeball on 116
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

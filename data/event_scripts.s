@@ -1157,3 +1157,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
+
+	.include "data/maps/Route116_2/scripts.inc"
+
+	.include "data/maps/Rustboro_Peak/scripts.inc"
+
+	.include "data/maps/Route104_North/scripts.inc"
+
+	.include "data/maps/Route119_North/scripts.inc"
