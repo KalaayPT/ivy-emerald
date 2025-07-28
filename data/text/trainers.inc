@@ -2430,6 +2430,20 @@ Route117_Text_MariaDefeat:
 	.string "I need to get more practices in,\n"
 	.string "I guess.$"
 
+Route116_Text_MariaIntro:
+	.string "I do my triathlon training with POKéMON,\n"
+	.string "so I'm pretty confident about my speed.$"
+
+Route116_Text_MariaDefeat:
+	.string "I need to get more practices in,\n"
+	.string "I guess.$"
+
+Route116_Text_MariaPostBattle:
+	.string "Training is meaningful only if you\n"
+	.string "keep it up regularly.\p"
+	.string "Okay! I'll resume my training!\n"
+	.string "Tomorrow!$"
+
 Route117_Text_MariaPostBattle:
 	.string "Training is meaningful only if you\n"
 	.string "keep it up regularly.\p"

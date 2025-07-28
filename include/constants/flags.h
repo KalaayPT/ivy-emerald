@@ -47,9 +47,9 @@
 #define FLAG_UNUSED_0x021    0x21 // no fight flag, used in overworld scripts to disable trainer battles
 #define FLAG_UNUSED_0x022    0x22 // no collision flag, used in overworld scripts to disable tile collision
 #define FLAG_UNUSED_0x023    0x23 // pokeball on 116
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_PETALBURG_EEVEE                0x24 // got eevee from Norman in Petalburg Gym
+#define FLAG_REPEL_TOGGLE                   0x25 // used for toggle repel
+#define FLAG_RUSTBORO_ROADBLOCK    0x26 // rustboro devon guy
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
