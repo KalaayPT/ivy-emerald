@@ -95,7 +95,7 @@
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
       "width": 20,
-      "height": 20,
+      "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
@@ -4422,14 +4422,14 @@
       "blockdata_filepath": "data/layouts/Route116_2/map.bin"
     },
     {
-      "id": "LAYOUT_RUSTBORO_PEAK",
-      "name": "Rustboro_Peak_Layout",
+      "id": "LAYOUT_RUSTURF_PEAK",
+      "name": "Rusturf_Peak_Layout",
       "width": 50,
       "height": 37,
       "primary_tileset": "gTileset_SnowGeneral",
       "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/Rustboro_Peak/border.bin",
-      "blockdata_filepath": "data/layouts/Rustboro_Peak/map.bin"
+      "border_filepath": "data/layouts/Rusturf_Peak/border.bin",
+      "blockdata_filepath": "data/layouts/Rusturf_Peak/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE104_NORTH",

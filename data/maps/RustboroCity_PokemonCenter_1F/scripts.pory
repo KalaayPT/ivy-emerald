@@ -47,3 +47,92 @@ RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor:
 	.string "CUT down skinny trees.$"
 
 `
+
+script RustboroCity_PokemonCenter_1F_EventScript_DevonDistributor{
+	lockall
+	faceplayer
+	if(!flag(FLAG_RUSTBORO_QUIZ_DONE)){
+		if(msgbox(format("Hey there, Trainer! I see you are just starting out on your journey, could I interest you in a special promotion that DEVON CORP is running?"), MSGBOX_YESNO)){
+			if(!msgbox(format("Great! all you have to do is answer a few questions about DEVON CORP and our products, and you will receive a special gift! First off, is the DEVON SCOPE used to look at things that are far away?"), MSGBOX_YESNO)){
+				message(format("That is correct! The DEVON SCOPE is actually used to see invisible Pokemon. Next, which one of these is a Poké Ball designed by DEVON CORP?"))
+				waitmessage
+				switch(multichoice(0, 6, MULTI_DEVONBALLS, FALSE)){
+				case 0: // Ultra Ball
+					msgbox("Close, but wrong, sorry. Try again.", MSGBOX_DEFAULT)
+					releaseall
+					end
+				case 1: // Jet Ball
+					msgbox(format("The Jet Ball has existed for hundreds of years, it has not been developed by DEVON CORP, sorry. Try again."), MSGBOX_DEFAULT)
+					releaseall
+					end
+				case 2: // Repeat Ball
+					if(msgbox(format("That is correct! The Repeat Ball is a Poké Ball designed by DEVON CORP. It is more effective at catching Pokémon that you have already caught before. Now, for the final question, what is the name of the device that DEVON CORP uses to help Trainers navigate their journeys? Is it the PokéNav?"), MSGBOX_YESNO)){
+						msgbox(format("That is correct! The PokéNav has many features, including a map, a Pokedex, and a phone. Thank you for participating in our quiz! As a reward, I would like to give you a few special Pokémon. These Pokémon originally come from Kanto! Please speak to me again when you have enough space in your party."), MSGBOX_DEFAULT)
+						setflag(FLAG_RUSTBORO_QUIZ_DONE)
+						releaseall
+						end
+					} else {
+						msgbox(format("One would think it was obvious, but no, that is not correct. Try again."), 	MSGBOX_DEFAULT)
+						releaseall
+						end
+					}
+				} 
+			} else {
+				msgbox(format("No, sorry, that is not correct. You should probably look up what our products do before taking this quiz."), MSGBOX_DEFAULT)
+				releaseall
+				end
+			}
+		} else {
+			msgbox(format("Oh, alright, please come back if you change your mind."), MSGBOX_DEFAULT)
+			releaseall
+			end
+		}
+	} else {
+		msgbox(format("You came to receive your Pokémon! Take these."), MSGBOX_DEFAULT)
+		if (getpartysize >= 6){
+			msgbox(format("Oh, your party is full! You need to make space for the Pokémon."), MSGBOX_DEFAULT)
+			releaseall
+			end
+		}
+		if (!flag(FLAG_RECEIVED_BULBASAUR)){
+			message("You received a BULBASAUR!")
+			playfanfare(MUS_OBTAIN_ITEM)
+			waitfanfare
+			givemon(SPECIES_BULBASAUR, 10)
+			setflag(FLAG_RECEIVED_BULBASAUR)
+		}
+		if (getpartysize >= 6){
+			msgbox(format("Oh, your party is full! You need to make space for the Pokémon."), MSGBOX_DEFAULT)
+			releaseall
+			end
+		}
+		if (!flag(FLAG_RECEIVED_SQUIRTLE)){
+			message("You received a SQUIRTLE!")
+			playfanfare(MUS_OBTAIN_ITEM)
+			waitfanfare
+			givemon(SPECIES_SQUIRTLE, 10)
+			setflag(FLAG_RECEIVED_SQUIRTLE)
+		}
+		if (getpartysize >= 6){
+			msgbox(format("Oh, your party is full! You need to make space for the Pokémon."), MSGBOX_DEFAULT)
+			releaseall
+			end
+		}
+		message("You received a CHARMANDER!")
+		playfanfare(MUS_OBTAIN_ITEM)
+		waitfanfare
+		givemon(SPECIES_CHARMANDER, 10)
+		setflag(FLAG_RECEIVED_CHARMANDER)
+		setflag(FLAG_RUSTBORO_STARTERS_RECEIVED)
+		msgbox(format("Thanks for participating, have a nice day!"), MSGBOX_DEFAULT)
+		closemessage
+		fadescreen(FADE_TO_BLACK)
+		removeobject(LOCALID_RUSTBORO_DEVON_DISTRIBUTOR)
+		fadescreen(FADE_FROM_BLACK)
+		releaseall
+		end
+	}
+	releaseall
+	end
+}
+

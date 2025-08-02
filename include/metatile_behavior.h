@@ -78,6 +78,7 @@ bool8 MetatileBehavior_IsTallGrass(u8 metatileBehavior);
 bool8 MetatileBehavior_IsLongGrass(u8 metatileBehavior);
 bool8 MetatileBehavior_IsBerryTreeSoil(u8 metatileBehavior);
 bool8 MetatileBehavior_IsAshGrass(u8 metatileBehavior);
+bool8 MetatileBehavior_IsSnowGrass(u8 metatileBehavior);
 bool8 MetatileBehavior_IsFootprints(u8 metatileBehavior);
 bool8 MetatileBehavior_IsBridgeOverWater(u8 metatileBehavior);
 u8 MetatileBehavior_GetBridgeType(u8 metatileBehavior);

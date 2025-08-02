@@ -286,3 +286,204 @@ RustboroCity_DevonCorp_1F_Text_ProductDisplay:
 	.string "tools for POKéMON TRAINERS, including\l"
 # 144 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
 	.string "POKé BALLS and POKéNAV systems.”$"
+
+DevonCorp_1F_EventScript_MysteryEgg::
+# 148 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	lockall
+# 149 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	faceplayer
+# 150 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	goto_if_unset FLAG_TRAINER_SCHOOL_MYSTERY_EGG, DevonCorp_1F_EventScript_MysteryEgg_2
+DevonCorp_1F_EventScript_MysteryEgg_1:
+# 205 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	msgbox DevonCorp_1F_EventScript_MysteryEgg_Text_5, MSGBOX_DEFAULT
+# 206 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	release
+	end
+
+DevonCorp_1F_EventScript_MysteryEgg_2:
+	msgbox DevonCorp_1F_EventScript_MysteryEgg_Text_0, MSGBOX_YESNO
+# 0 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne DevonCorp_1F_EventScript_MysteryEgg_4
+# 200 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	msgbox DevonCorp_1F_EventScript_MysteryEgg_Text_4, MSGBOX_DEFAULT
+# 201 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	release
+	end
+
+DevonCorp_1F_EventScript_MysteryEgg_4:
+	getpartysize
+# 0 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	compare VAR_RESULT, 6
+	goto_if_ge DevonCorp_1F_EventScript_MysteryEgg_8
+# 159 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	msgbox DevonCorp_1F_EventScript_MysteryEgg_Text_2, MSGBOX_DEFAULT
+# 160 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	msgbox DevonCorp_1F_EventScript_MysteryEgg_Text_3, MSGBOX_DEFAULT
+# 161 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 162 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	waitfanfare
+# 163 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	random 16
+# 164 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	switch VAR_RESULT
+# 165 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 0, DevonCorp_1F_EventScript_MysteryEgg_12
+# 167 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 1, DevonCorp_1F_EventScript_MysteryEgg_13
+# 169 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 2, DevonCorp_1F_EventScript_MysteryEgg_14
+# 171 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 3, DevonCorp_1F_EventScript_MysteryEgg_15
+# 173 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 4, DevonCorp_1F_EventScript_MysteryEgg_16
+# 175 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 5, DevonCorp_1F_EventScript_MysteryEgg_17
+# 177 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 6, DevonCorp_1F_EventScript_MysteryEgg_18
+# 179 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 7, DevonCorp_1F_EventScript_MysteryEgg_19
+# 181 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 8, DevonCorp_1F_EventScript_MysteryEgg_20
+# 183 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 9, DevonCorp_1F_EventScript_MysteryEgg_21
+# 185 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 10, DevonCorp_1F_EventScript_MysteryEgg_22
+# 187 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 11, DevonCorp_1F_EventScript_MysteryEgg_23
+# 189 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 12, DevonCorp_1F_EventScript_MysteryEgg_24
+# 191 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 13, DevonCorp_1F_EventScript_MysteryEgg_25
+# 193 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 14, DevonCorp_1F_EventScript_MysteryEgg_26
+# 195 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	case 15, DevonCorp_1F_EventScript_MysteryEgg_27
+DevonCorp_1F_EventScript_MysteryEgg_10:
+# 198 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	setflag FLAG_TRAINER_SCHOOL_MYSTERY_EGG
+	goto DevonCorp_1F_EventScript_MysteryEgg_1
+
+DevonCorp_1F_EventScript_MysteryEgg_8:
+# 155 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	msgbox DevonCorp_1F_EventScript_MysteryEgg_Text_1, MSGBOX_DEFAULT
+# 156 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	release
+	end
+
+DevonCorp_1F_EventScript_MysteryEgg_12:
+# 166 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_PICHU
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_13:
+# 168 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_IGGLYBUFF
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_14:
+# 170 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_TOGEPI
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_15:
+# 172 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_CLEFFA
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_16:
+# 174 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_SMOOCHUM
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_17:
+# 176 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_TYROGUE
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_18:
+# 178 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_MAGBY
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_19:
+# 180 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_ELEKID
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_20:
+# 182 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_MANTYKE
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_21:
+# 184 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_AZURILL
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_22:
+# 186 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_WYNAUT
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_23:
+# 188 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_BUDEW
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_24:
+# 190 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_CHINGLING
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_25:
+# 192 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_HAPPINY
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_26:
+# 194 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_MIME_JR
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+DevonCorp_1F_EventScript_MysteryEgg_27:
+# 196 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	giveegg SPECIES_BONSLY
+	goto DevonCorp_1F_EventScript_MysteryEgg_10
+
+
+DevonCorp_1F_EventScript_MysteryEgg_Text_0:
+# 153 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	.string "Greetings, you are a Pokemon Trainer,\n"
+	.string "aren't you? Have you heard of the Day\l"
+	.string "Care on Route 117 near Mauville City?\l"
+	.string "My Aunt and Uncle run it, and they take\l"
+	.string "care of your Pokemon for you.\l"
+	.string "Sometimes, they even find a Pokemon\l"
+	.string "Egg! Coincindentally, I actually have an\l"
+	.string "Egg for you. It's got a cute baby\l"
+	.string "Pokemon inside. Do you want it?$"
+
+DevonCorp_1F_EventScript_MysteryEgg_Text_1:
+# 155 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	.string "Oh, your party is full! You need to make\n"
+	.string "space for the Egg.$"
+
+DevonCorp_1F_EventScript_MysteryEgg_Text_2:
+# 159 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	.string "Great! Here you go!$"
+
+DevonCorp_1F_EventScript_MysteryEgg_Text_3:
+# 160 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	.string "You received a Mystery Egg!$"
+
+DevonCorp_1F_EventScript_MysteryEgg_Text_4:
+# 200 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	.string "Oh, you don't want the Egg? I\n"
+	.string "understand. Maybe another time then.$"
+
+DevonCorp_1F_EventScript_MysteryEgg_Text_5:
+# 205 "data/maps/RustboroCity_DevonCorp_1F/scripts.pory"
+	.string "Take good care of the baby Pokémon!$"

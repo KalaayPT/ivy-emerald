@@ -144,3 +144,65 @@ RustboroCity_DevonCorp_1F_Text_ProductDisplay:
 	.string "POKé BALLS and POKéNAV systems.”$"
 
 `
+script DevonCorp_1F_EventScript_MysteryEgg{
+	lockall 
+	faceplayer
+	if(!flag(FLAG_TRAINER_SCHOOL_MYSTERY_EGG)){
+		//TODO: look over this text
+	//Well, howdy there!\nYou’re a Pokémon Trainer, aren’t you?\rHave ya’ll heard about the Pokémon\nDay Care in Solaceon Town?\rIt’s a place where you can ask ol’\nMa and Pa to raise your Pokémon.\rSometimes, there’s even a special\nsurprise with a Pokémon Egg!\rAs a special promotion, here’s an Egg,\njust for you!\rIt’s got a cute baby Pokémon inside.\nDo you want it?
+	if(msgbox(format("Greetings, you are a Pokemon Trainer, aren't you? Have you heard of the Day Care on Route 117 near Mauville City? My Aunt and Uncle run it, and they take care of your Pokemon for you. Sometimes, they even find a Pokemon Egg! Coincindentally, I actually have an Egg for you. It's got a cute baby Pokemon inside. Do you want it?"), MSGBOX_YESNO)){
+		if (getpartysize >= 6){
+			msgbox(format("Oh, your party is full! You need to make space for the Egg."), MSGBOX_DEFAULT)
+			release
+			end
+		}
+		msgbox(format("Great! Here you go!"), MSGBOX_DEFAULT)
+		msgbox(format("You received a Mystery Egg!"), MSGBOX_DEFAULT)
+		playfanfare(MUS_OBTAIN_ITEM)
+		waitfanfare
+		random(16)
+		switch (var(VAR_RESULT)){
+		case 0:
+			giveegg(SPECIES_PICHU)
+		case 1:
+			giveegg(SPECIES_IGGLYBUFF)
+		case 2:
+			giveegg(SPECIES_TOGEPI)
+		case 3:
+			giveegg(SPECIES_CLEFFA)
+		case 4:
+			giveegg(SPECIES_SMOOCHUM)
+		case 5:
+			giveegg(SPECIES_TYROGUE)
+		case 6:
+			giveegg(SPECIES_MAGBY)
+		case 7:
+			giveegg(SPECIES_ELEKID)
+		case 8:
+			giveegg(SPECIES_MANTYKE)
+		case 9:
+			giveegg(SPECIES_AZURILL)
+		case 10:
+			giveegg(SPECIES_WYNAUT)
+		case 11:
+			giveegg(SPECIES_BUDEW)
+		case 12:
+			giveegg(SPECIES_CHINGLING)
+		case 13:
+			giveegg(SPECIES_HAPPINY)
+		case 14:
+			giveegg(SPECIES_MIME_JR)
+		case 15:
+			giveegg(SPECIES_BONSLY)
+		}
+		setflag(FLAG_TRAINER_SCHOOL_MYSTERY_EGG)
+		} else {
+			msgbox(format("Oh, you don't want the Egg? I understand. Maybe another time then."), MSGBOX_DEFAULT)
+			release
+			end
+		}
+	}
+	msgbox(format("Take good care of the baby Pokémon!"), MSGBOX_DEFAULT)
+	release
+	end
+}

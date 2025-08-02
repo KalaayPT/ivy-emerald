@@ -791,7 +791,7 @@
 #define ITEM_TM71 652
 #define ITEM_TM72 653
 #define ITEM_TM73 654
-#define ITEM_TM74 655
+#define ITEM_TM_GYRO_BALL 655
 #define ITEM_TM75 656
 #define ITEM_TM76 657
 #define ITEM_TM77 658
@@ -805,7 +805,7 @@
 #define ITEM_TM85 666
 #define ITEM_TM86 667
 #define ITEM_TM87 668
-#define ITEM_TM88 669
+#define ITEM_TM_PLUCK 669
 #define ITEM_TM89 670
 #define ITEM_TM90 671
 #define ITEM_TM91 672
