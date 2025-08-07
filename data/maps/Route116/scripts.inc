@@ -952,3 +952,44 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "No TRAINER can afford to be without\n"
 # 477 "data/maps/Route116/scripts.pory"
 	.string "a BAG of their own.$"
+
+Route116_EventScript_Jack::
+# 482 "data/maps/Route116/scripts.pory"
+	trainerbattle_single TRAINER_JACK_2, Route116_EventScript_Jack_Text_0, Route116_EventScript_Jack_Text_1
+# 483 "data/maps/Route116/scripts.pory"
+	msgbox Route116_EventScript_Jack_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_EventScript_Frank::
+# 488 "data/maps/Route116/scripts.pory"
+	trainerbattle_single TRAINER_FRANK, Route116_EventScript_Frank_Text_0, Route116_EventScript_Frank_Text_1
+# 489 "data/maps/Route116/scripts.pory"
+	msgbox Route116_EventScript_Frank_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_EventScript_Jack_Text_0:
+# 482 "data/maps/Route116/scripts.pory"
+	.string "I love psychic Pokémon!$"
+
+Route116_EventScript_Jack_Text_1:
+# 482 "data/maps/Route116/scripts.pory"
+	.string "Looks like Psychic Pokémon aren't the\n"
+	.string "end-all be-all after all...$"
+
+Route116_EventScript_Jack_Text_2:
+# 483 "data/maps/Route116/scripts.pory"
+	.string "I will get some more differnt Pokémon!$"
+
+Route116_EventScript_Frank_Text_0:
+# 488 "data/maps/Route116/scripts.pory"
+	.string "start message$"
+
+Route116_EventScript_Frank_Text_1:
+# 488 "data/maps/Route116/scripts.pory"
+	.string "fight message$"
+
+Route116_EventScript_Frank_Text_2:
+# 489 "data/maps/Route116/scripts.pory"
+	.string "aftermessage$"

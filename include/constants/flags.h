@@ -46,24 +46,24 @@
 #define FLAG_UNUSED_0x020    0x20 // no encounter flag, used in overworld scripts to disable wild encounters
 #define FLAG_UNUSED_0x021    0x21 // no fight flag, used in overworld scripts to disable trainer battles
 #define FLAG_UNUSED_0x022    0x22 // no collision flag, used in overworld scripts to disable tile collision
-#define FLAG_UNUSED_0x023    0x23 // pokeball on 116
+#define FLAG_116_POKEBALL    0x23 // pokeball on 116
 #define FLAG_PETALBURG_EEVEE                0x24 // got eevee from Norman in Petalburg Gym
 #define FLAG_REPEL_TOGGLE                   0x25 // used for toggle repel
-#define FLAG_RUSTBORO_ROADBLOCK    0x26 // rustboro devon guy
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
+#define FLAG_RUSTBORO_ROADBLOCK             0x26 // rustboro devon guy
+#define FLAG_TRAINER_SCHOOL_MYSTERY_EGG     0x27 // for giving the player the mystery egg in Devon Corp
+#define FLAG_RUSTBORO_STARTERS_RECEIVED     0x28 // devon guy in rustboro, gives kanto starters
+#define FLAG_DEWFORD_STARTERS_RECEIVED      0x29 // devon guy in dewford, gives johto starters
+#define FLAG_RUSTBORO_QUIZ_DONE             0x2A // flag used for starter distributors
+#define FLAG_DEWFORD_QUIZ_DONE              0x2B // flag used for starter distributors
+#define FLAG_RECEIVED_BULBASAUR             0x2C // flag used for starter distributors
+#define FLAG_RECEIVED_SQUIRTLE              0x2D // flag used for starter distributors
+#define FLAG_RECEIVED_CHARMANDER            0x2E // flag used for starter distributors
+#define FLAG_RECEIVED_CHIKORITA             0x2F // flag used for starter distributors
+#define FLAG_RECEIVED_TOTODILE              0x30 // flag used for starter distributors
+#define FLAG_RECEIVED_CYNDAQUIL             0x31 // flag used for starter distributors
+#define FLAG_RECEIVED_TREECKO               0x32 // flag used for starter distributors
+#define FLAG_RECEIVED_MUDKIP                0x33 // flag used for starter distributors
+#define FLAG_RECEIVED_TORCHIC               0x34 // flag used for starter distributors
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag
 #define FLAG_UNUSED_0x036    0x36 // Unused Flag
 #define FLAG_UNUSED_0x037    0x37 // Unused Flag
