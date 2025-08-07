@@ -1702,30 +1702,6 @@
       "y": 4,
       "width": 1,
       "height": 1
-    },
-    {
-      "id": "MAPSEC_TRAINER_SCHOOL",
-      "name": "TRAINER SCHOOL",
-      "x": 13,
-      "y": 13,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_DEVON_CORP",
-      "name": "DEVON CORP",
-      "x": 15,
-      "y": 15,
-      "width": 1,
-      "height": 1
-    },
-    {
-      "id": "MAPSEC_RUSTURF_PEAK",
-      "name": "RUSTURF PEAK",
-      "x": 17,
-      "y": 17,
-      "width": 2,
-      "height": 2
     }
   ]
 }

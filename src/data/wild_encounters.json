@@ -1898,63 +1898,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 1,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_WHISMUR"
               },
               {
-                "min_level": 1,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_DIGLETT"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_NOSEPASS"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_NOSEPASS"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_ARON"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_WOOPER_PALDEA"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_MAWILE"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 8,
+                "max_level": 9,
                 "species": "SPECIES_WHISMUR"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_MAWILE"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 8,
+                "max_level": 9,
                 "species": "SPECIES_WHISMUR"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 7,
+                "max_level": 9,
                 "species": "SPECIES_MAWILE"
               },
               {
-                "min_level": 10,
-                "max_level": 11,
+                "min_level": 8,
+                "max_level": 9,
                 "species": "SPECIES_WHISMUR"
               }
             ]
@@ -3349,7 +3349,7 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_BARBOACH"
+                "species": "SPECIES_TENTACOOL"
               },
               {
                 "min_level": 10,
@@ -11558,8 +11558,8 @@
           }
         },
         {
-          "map": "MAP_RUSTURF_PEAK",
-          "base_label": "gRusturf_Peak",
+          "map": "MAP_RUSTBORO_PEAK",
+          "base_label": "gRustboro_Peak",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [
@@ -11914,95 +11914,6 @@
                 "min_level": 9,
                 "max_level": 10,
                 "species": "SPECIES_KAKUNA"
-              }
-            ]
-          }
-        },
-        {
-          "map": "MAP_LITTLEROOT_TOWN",
-          "base_label": "gLittlerootTown",
-          "water_mons": {
-            "encounter_rate": 1,
-            "mons": [
-              {
-                "min_level": 20,
-                "max_level": 30,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 10,
-                "max_level": 20,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 30,
-                "max_level": 35,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MARILL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MARILL"
-              }
-            ]
-          },
-          "fishing_mons": {
-            "encounter_rate": 30,
-            "mons": [
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
               }
             ]
           }
