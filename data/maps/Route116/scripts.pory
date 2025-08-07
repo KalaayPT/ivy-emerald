@@ -477,14 +477,3 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "a BAG of their own.$"
 
 `
-script Route116_EventScript_Jack{
-	trainerbattle_single(TRAINER_JACK_2, format("I love psychic Pokémon!"), format("Looks like Psychic Pokémon aren't the end-all be-all after all..."))
-	msgbox(format("I will get some more differnt Pokémon!"), MSGBOX_AUTOCLOSE)
-	end
-}
-
-script Route116_EventScript_Frank{
-	trainerbattle_single(TRAINER_FRANK, format("start message"), format("fight message"))
-	msgbox(format("aftermessage"), MSGBOX_AUTOCLOSE)
-	end
-}

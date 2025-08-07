@@ -11485,19 +11485,16 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_NONE, // Todo
     },
 
-    [ITEM_TM_GYRO_BALL] =
+    [ITEM_TM74] =
     {
         .name = _("TM74"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "User tackles foe\n"
-            "with spin attack.\n"
-            "Slower is stronger."),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_GYRO_BALL,
+        .secondaryId = MOVE_NONE, // Todo
     },
 
     [ITEM_TM75] =
@@ -11656,19 +11653,16 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_NONE, // Todo
     },
 
-    [ITEM_TM_PLUCK] =
+    [ITEM_TM88] =
     {
         .name = _("TM88"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "User pecks foe.\n"
-            "If holding berry,\n"
-            "user eats it."), 
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_PLUCK, 
+        .secondaryId = MOVE_NONE, // Todo
     },
 
     [ITEM_TM89] =

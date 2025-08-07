@@ -66,20 +66,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RustboroCity_PokemonCenter_1F_EventScript_Girl",
       "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_RUSTBORO_DEVON_DISTRIBUTOR",
-      "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
-      "x": 2,
-      "y": 2,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "RustboroCity_PokemonCenter_1F_EventScript_DevonDistributor",
-      "flag": "FLAG_RUSTBORO_STARTERS_RECEIVED"
     }
   ],
   "warp_events": [

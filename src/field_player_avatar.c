@@ -2128,8 +2128,8 @@ static bool32 Fishing_CheckForBite(struct Task *task)
     if (!bite)
         bite = Fishing_RollForBite(task->tFishingRod, FALSE);
 
-    //if (!bite)
-    //    task->tStep = FISHING_NOT_EVEN_NIBBLE;
+    if (!bite)
+        task->tStep = FISHING_NOT_EVEN_NIBBLE;
 
     if (bite)
         StartSpriteAnim(&gSprites[gPlayerAvatar.spriteId], GetFishingBiteDirectionAnimNum(GetPlayerFacingDirection()));

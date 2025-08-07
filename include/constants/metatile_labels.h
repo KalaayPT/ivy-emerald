@@ -719,10 +719,6 @@
 #define METATILE_Slateport_Door             0x2DC
 #define METATILE_Slateport_Door_BattleTent  0x393
 
-// gTileset_SnowGeneral
-#define METATILE_SnowGeneral_METATILE_Mountain_NormalGrass  0x015
-#define METATILE_SnowGeneral_METATILE_Mountain_SnowGrass    0x00D
-
 // gTileset_Sootopolis
 #define METATILE_Sootopolis_Door             0x21E
 #define METATILE_Sootopolis_Door_Closed      0x248
